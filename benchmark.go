@@ -16,7 +16,7 @@ func randKey(minL int, maxL int) string {
 	n := rand.Intn(maxL-minL+1) + minL
 	buf := make([]byte, n)
 	for i := 0; i < n; i++ {
-		buf[i] = byte(rand.Intn(95) + 32)
+		buf[i] = byte(rand.Intn(25) + 65)
 	}
 	return string(buf)
 }
