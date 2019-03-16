@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	engine       = flag.String("e", "pogreb", "database engine name. pogreb, goleveldb, bbolt or badger")
+	engine       = flag.String("e", "pogreb", "database engine name. pogreb, goleveldb, bbolt, badger, or bitcask")
 	numKeys      = flag.Int("n", 100000, "number of keys")
 	minKeySize   = flag.Int("mink", 16, "minimum key size")
 	maxKeySize   = flag.Int("maxk", 64, "maximum key size")
@@ -27,6 +27,12 @@ func main() {
 	if *dir == "" {
 		flag.Usage()
 		return
+	}
+
+	err := os.MkdirAll(*dir, 0755)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 
 	switch *profileMode {
