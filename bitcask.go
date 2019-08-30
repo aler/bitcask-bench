@@ -18,11 +18,11 @@ func newBitcask(path string) (kvEngine, error) {
 }
 
 func (db *bitcaskEngine) Put(key []byte, value []byte) error {
-	return db.db.Put(string(key), value)
+	return db.db.Put(key, value)
 }
 
 func (db *bitcaskEngine) Get(key []byte) ([]byte, error) {
-	val, err := db.db.Get(string(key))
+	val, err := db.db.Get(key)
 	return val, err
 }
 
