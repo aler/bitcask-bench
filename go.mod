@@ -28,8 +28,8 @@ require (
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/onsi/gomega v1.5.0 // indirect
 	github.com/pkg/profile v1.2.1
-	github.com/prologic/bitcask v0.3.4
-	github.com/prologic/msgbus v0.1.1 // indirect
+	git.mills.io/prologic/bitcask v0.3.4
+	git.mills.io/prologic/msgbus v0.1.1 // indirect
 	github.com/prometheus/client_golang v1.1.0 // indirect
 	github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4 // indirect
 	github.com/prometheus/procfs v0.0.4 // indirect
@@ -57,4 +57,4 @@ require (
 	honnef.co/go/tools v0.0.1-2019.2.2 // indirect
 )
 
-replace github.com/prologic/bitcask => /Users/prologic/Projects/bitcask
+replace git.mills.io/prologic/bitcask => /Users/prologic/Projects/bitcask
