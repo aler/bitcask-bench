@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/etcd-io/bbolt"
+	"go.etcd.io/bbolt"
 )
 
 var boltBucketName = []byte("benchmark")

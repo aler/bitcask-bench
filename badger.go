@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/v3"
 )
 
 func newBadger(path string) (kvEngine, error) {
-	opts := badger.DefaultOptions
+	opts := badger.DefaultOptions(path)
 	opts.SyncWrites = false
 	opts.Dir = path
 	opts.ValueDir = path
